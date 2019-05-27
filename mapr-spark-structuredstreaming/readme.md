@@ -108,14 +108,18 @@ ________________________________________________________________________________
 
 Run the Streaming code to publish events to the topic:
 
+```
 java -cp ./mapr-spark-structuredstreaming-uber-1.0.jar:`mapr classpath` streams.MsgProducer
+```
 
 This client will read lines from the file in "/mapr/demo.mapr.com/data/uber.csv" and publish them to the topic /apps/uberstream:ubers.
 You can optionally pass the file and topic as input parameters <file topic>
 
 Optional: run the MapR Streams Java consumer to see what was published :
 
+```
 java -cp mapr-spark-structuredstreaming-uber-1.0.jar:`mapr classpath` streams.MsgConsumer
+```
 
 _________________________________________________________________________________
 
