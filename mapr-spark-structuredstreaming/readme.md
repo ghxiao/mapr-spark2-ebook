@@ -127,8 +127,10 @@ ________________________________________________________________________________
 (in separate consoles if you want to run at the same time)
 
 
+```
 /opt/mapr/spark/spark-2.3.1/bin/spark-submit --class streaming.StructuredStreamingConsumer --master local[2] \
  mapr-spark-structuredstreaming-uber-1.0.jar
+```
 
 This spark streaming client will consume from the topic /apps/uberstream:ubers, enrich from the saved model at
 /mapr/demo.mapr.com/data/ubermodel and write to the table /apps/ubertable.
