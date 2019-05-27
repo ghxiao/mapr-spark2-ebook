@@ -44,7 +44,7 @@ Copy the data file from the project data folder to the sandbox using scp to this
 use userid: mapr and password: mapr.
 For VMWare use:  $ scp  *.csv  mapr@<ipaddress>:/home/mapr/.
 
-For Virtualbox use:  $ scp -P 2222 data/*.json  mapr@127.0.0.1:/mapr/demo.mapr.com/data/.
+For Virtualbox use:  $ scp -P 2222 data/*.json  mapr@127.0.0.1:/home/mapr/demo.mapr.com/data/.
 
 this will put the data file into the cluster directory:
 /mapr/<cluster-name>/data/
