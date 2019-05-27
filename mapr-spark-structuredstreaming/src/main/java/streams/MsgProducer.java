@@ -17,7 +17,7 @@ public class MsgProducer {
     public static void main(String[] args) throws Exception {
 
         // Set the default stream and topic to publish to.
-        String fileName = "/mapr/demo.mapr.com/data/uber.csv";
+        String fileName = "/home/mapr/demo.mapr.com/data/uber.csv";
 
         String topic = "/apps/uberstream:ubers";
 

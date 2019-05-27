@@ -11,7 +11,7 @@
 
     <properties>
 
-        
+
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <encoding>UTF-8</encoding>
@@ -20,18 +20,18 @@
         <scala.binary.version>2.11</scala.binary.version>
 
         <!-- version = <spark_version>-mapr-<mapr_eco_version> 2.3.1-mapr-1808-r2-->
-       
+
         <drill.version>1.11.0-mapr</drill.version>
         <ojai.version>2.0-mapr-1710</ojai.version>
-      
-        <scala.binary.version>2.11</scala.binary.version>     
-       
- 
-        <mapr.version>6.1-mapr</mapr.version>
+
+        <scala.binary.version>2.11</scala.binary.version>
+
+
+        <mapr.version>6.1.0-mapr</mapr.version>
         <spark.version>2.3.1-mapr-1808-r2</spark.version>
-        <scala.binary.version>2.11</scala.binary.version>  
-        
-    </properties>  
+        <scala.binary.version>2.11</scala.binary.version>
+
+    </properties>
 
     <repositories>
         <repository>
@@ -79,13 +79,13 @@
         <dependency>
             <groupId>org.apache.spark</groupId>
             <artifactId>spark-core_${scala.binary.version}</artifactId>
-            <version>${spark.version}</version>   
+            <version>${spark.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.spark</groupId>
             <artifactId>spark-mllib_${scala.binary.version}</artifactId>
             <version>${spark.version}</version>
-        
+
         </dependency>
 
 
@@ -95,14 +95,14 @@
             <artifactId>spark-streaming-kafka-0-10_${scala.binary.version}</artifactId>
             <version>${spark.version}</version>
         </dependency>
-  
+
         <dependency>
             <groupId>org.apache.spark</groupId>
             <artifactId>spark-sql-kafka-0-10_${scala.binary.version}</artifactId>
             <version>${spark.version}</version>
-                 
+
         </dependency>
-  
+
         <dependency>
             <groupId>org.apache.spark</groupId>
             <artifactId>spark-streaming_${scala.binary.version}</artifactId>
@@ -122,41 +122,41 @@
             <version>${spark.version}</version>
             <scope>provided</scope>
         </dependency>
-        
+
         <dependency>
             <groupId>org.apache.kafka</groupId>
             <artifactId>kafka-clients</artifactId>
-            <version>1.0.1-mapr-streams-6.0.1</version>  
+            <version>1.0.1-mapr-streams-6.0.1</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.apache.zookeeper</groupId>
                     <artifactId>zookeeper</artifactId>
                 </exclusion>
-            </exclusions>      
+            </exclusions>
         </dependency>
-        
+
     </dependencies>
-   
-   
+
+
     <build>
 
         <plugins>
             <plugin>
-                <groupId>org.scala-tools</groupId>						
+                <groupId>org.scala-tools</groupId>
                 <artifactId>maven-scala-plugin</artifactId>
-                <version>2.11</version> 							
-                <executions>									
-                    <execution>									
-                        <goals>										
+                <version>2.11</version>
+                <executions>
+                    <execution>
+                        <goals>
                             <goal>compile</goal>
                         </goals>
                     </execution>
                 </executions>
             </plugin>
 
-    
+
         </plugins>
-        
+
 
     </build>
 

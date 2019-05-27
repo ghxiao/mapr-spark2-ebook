@@ -60,13 +60,13 @@ object StructuredStreamingConsumer extends Serializable {
 
     var topic: String = "/apps/uberstream:ubers"
     var tableName: String = "/apps/ubertable"
-    var savedirectory: String = "/mapr/demo.mapr.com/data/ubermodel"
+    var savedirectory: String = "file:///home/mapr/demo.mapr.com/data/ubermodel"
 
     if (args.length == 3) {
       topic = args(0)
       savedirectory = args(1)
       tableName = args(2)
-     
+
     } else {
       System.out.println("Using hard coded parameters unless you specify topic model directory and table. <topic model table>   ")
     }

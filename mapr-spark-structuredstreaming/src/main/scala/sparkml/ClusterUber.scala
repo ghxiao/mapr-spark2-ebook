@@ -24,9 +24,9 @@ object ClusterUber {
 
   def main(args: Array[String]) {
 
-    var file: String = "/mapr/demo.mapr.com/data/uber.csv"
-    var savedirectory: String = "/mapr/demo.mapr.com/data/ubermodel"
-    var file2: String = "/mapr/demo.mapr.com/data/uberjson"
+    var file: String = "file:///home/mapr/demo.mapr.com/data/uber.csv"
+    var savedirectory: String = "file:///home/mapr/demo.mapr.com/data/ubermodel"
+    var file2: String = "file:///home/mapr/demo.mapr.com/data/uberjson"
 
     if (args.length == 2) {
       file = args(0)
@@ -80,12 +80,12 @@ object ClusterUber {
     println("SELECT hour(uber.dt) as hr,count(cid) as ct FROM uber group By hour(uber.dt)")
     spark.sql("SELECT hour(uber.dt) as hr,count(cid) as ct FROM uber group By hour(uber.dt)").show
 
-    // to save the model 
+    // to save the model
     println("save the model")
     model.write.overwrite().save(savedirectory)
     // model can be  re-loaded like this
     // val sameModel = KMeansModel.load(savedirectory)
-    //  
+    //
     // to save the categories dataframe as json data
     val res = spark.sql("select dt, lat, lon, base, cid as cid FROM uber order by dt")
     res.show
